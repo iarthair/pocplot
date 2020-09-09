@@ -1,0 +1,3 @@
+option('docs',          type: 'boolean', value: 'false')
+option('introspection', type: 'boolean', value: 'true')
+option('vapi',          type: 'boolean', value: 'false')

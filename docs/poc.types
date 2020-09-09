@@ -1,0 +1,11 @@
+poc_axis_get_type
+poc_axis_mode_get_type
+poc_dataset_get_type
+poc_dataset_spline_get_type
+poc_double_array_get_type
+poc_legend_get_type
+poc_line_style_get_type
+poc_plot_get_type
+poc_point_array_get_type
+poc_point_get_type
+poc_sample_get_type

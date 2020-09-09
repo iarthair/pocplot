@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is part of PocPlot.
+
+  PocPlot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License as published
+  by the Free Software Foundation; either version 2.1 of the License, or
+  (at your option) any later version.
+
+  PocPlot is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with PocPlot; if not, see <https://www.gnu.org/licenses/>.
+
+  Copyright 2020 Brian Stafford
+  -->
+<glade-catalog name="poc" library="libpoc.so" depends="gtk+">
+
+  <glade-widget-classes>
+    <glade-widget-class name="PocPlot"
+    			generic-name="plot"
+			title="PocPlot canvas"/>
+
+    <glade-widget-class name="PocDataset"
+    			generic-name="dataset"
+			title="PocPlot data set"/>
+
+    <glade-widget-class name="PocDatasetSpline"
+    			generic-name="dataset"
+			title="PocPlot data set with cubic spline interpolation"/>
+
+    <glade-widget-class name="PocAxis"
+    			generic-name="axis"
+			title="PocPlot axis"/>
+
+    <glade-widget-class name="PocLegend"
+    			generic-name="legend"
+			title="Show line sample and legend text for PocPlot"/>
+
+    <glade-widget-class name="PocSample"
+    			generic-name="sample"
+			title="PocPlot data set sample line"/>
+  </glade-widget-classes>
+
+  <glade-widget-group name="poc-widgets" title="PocPlot Widgets">
+    <glade-widget-class-ref name="PocPlot"/>
+    <glade-widget-class-ref name="PocDataset"/>
+    <glade-widget-class-ref name="PocDatasetSpline"/>
+    <glade-widget-class-ref name="PocAxis"/>
+    <glade-widget-class-ref name="PocLegend"/>
+    <glade-widget-class-ref name="PocSample"/>
+  </glade-widget-group>
+</glade-catalog>

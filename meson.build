@@ -1,4 +1,4 @@
-project('poc', 'c', version : '0.1.0', default_options: ['c_std=c11'])
+project('poc', 'c', version : '0.1.1', default_options: ['c_std=c11'])
 pkg = import('pkgconfig')
 gnome = import('gnome')
 

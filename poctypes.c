@@ -48,7 +48,10 @@ poc_point_free (PocPoint *pt)
   g_slice_free (PocPoint, pt);
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
 G_DEFINE_BOXED_TYPE (PocPoint, poc_point, poc_point_copy, poc_point_free)
+#pragma GCC diagnostic pop
 
 /* Point array {{{1 */
 
@@ -142,8 +145,11 @@ poc_point_array_set_size (PocPointArray *array, guint size)
   return (PocPointArray *) g_array_set_size ((GArray *) array, size);
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
 G_DEFINE_BOXED_TYPE (PocPointArray, poc_point_array,
 		     poc_point_array_ref, poc_point_array_unref)
+#pragma GCC diagnostic pop
 
 /* Double array {{{1 */
 
@@ -231,8 +237,11 @@ poc_double_array_unref (PocDoubleArray *array)
   g_array_unref ((GArray *) array);
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
 G_DEFINE_BOXED_TYPE (PocDoubleArray, poc_double_array,
 		     poc_double_array_ref, poc_double_array_unref)
+#pragma GCC diagnostic pop
 
 
 /* Enums {{{1 */

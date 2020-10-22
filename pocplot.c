@@ -827,9 +827,12 @@ poc_plot_remove_dataset_internal (PocPlot *self, PocDataset *dataset)
 {
   PocAxis *axis;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
   g_signal_handlers_disconnect_by_func (dataset,
   					G_CALLBACK (poc_plot_notify_update),
 					self);
+#pragma GCC diagnostic pop
   if ((axis = poc_dataset_get_x_axis (dataset)) != NULL)
     poc_plot_remove_axis (self, axis);
   if ((axis = poc_dataset_get_y_axis (dataset)) != NULL)
@@ -1002,9 +1005,12 @@ poc_plot_remove_axis (PocPlot *self, PocAxis *axis)
 
   if (poc_object_bag_remove (self->axes, G_OBJECT (axis)))
     {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
       g_signal_handlers_disconnect_by_func (axis,
 					    G_CALLBACK (poc_plot_notify_update),
 					    self);
+#pragma GCC diagnostic pop
       if (axis == self->x_axis)
 	{
 	  g_clear_object (&self->x_axis);
